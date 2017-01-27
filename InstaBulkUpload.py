@@ -27,10 +27,10 @@ igapi.login() # login
 
 for i in range(len(ListFiles)):
     photo = ListFiles[i]
-    print ("Progress :" + str([i]) + " of " + str(len(ListFiles)))
+    print ("Progress :" + str([i+1]) + " of " + str(len(ListFiles)))
     print ("Now Uploading this photo to instagram: " + photo)
     igapi.uploadPhoto(photo,caption=IGCaption,upload_id=None)
-    # sleep for random between 30 - 300s
+    # sleep for random between 60 - 120s
     n = randint(60,120)
     print ("Sleep upload for seconds: " + str(n))
     time.sleep(n)
