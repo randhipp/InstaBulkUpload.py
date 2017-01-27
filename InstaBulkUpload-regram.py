@@ -27,7 +27,7 @@ print ("Start listing photo...\nTotal Photo in this folder:" + str (len(ListFile
 igapi = InstagramAPI(IGUSER,PASSWD)
 igapi.login() # login
 
-for i in range(24,55):
+for i in range(len(ListFiles)):
     photo = ListFiles[i]
 	
     ext   = os.path.splitext(photo)[-1].lower()
@@ -53,6 +53,6 @@ for i in range(24,55):
         #igapi.uploadVideo(photo, thumb, caption = "Video Regram from " + str(Regram) + "\n\n" + IGCaption + "\n\n" + hashtag ,upload_id=None)
     
     # sleep for random between 60 - 120s
-    n = randint(30,120)
+    n = randint(60,120)
     print ("Sleep upload for :" + str(n) + "seconds")
     time.sleep(n)
